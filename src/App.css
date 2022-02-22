@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    scroll-behavior: smooth;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: rgba(25,5,40,1);
+    color: #EEEEEE;
+    font-size: 16px;
+    line-height: 1.265;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    hyphens: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+    width: 100%;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 1400px) {
+    main {
+        max-width: 1500px;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section {
+    width: 92%;
+    margin: 3rem auto;
+}
+
+@media (min-width: 768px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        width: 86%;
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 20px;
+    display: inline;
+    color: #071C21;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, #FEC260 50%, #FEC260 100%);
+    padding-right: 4px;
+}
+
+@media (min-width: 320px) {
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.form-container {
+    background-color: #2A0944;
+    padding: 3rem 3rem 5rem 3rem;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form > div:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 1rem;
+}
+
+input {
+    display: block;
+    width: 400px;
+    height: 40px;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    width: 100px;
+    padding: 10px 16px;
+    margin: 0 0.25rem;
+    transition: 0.3s ease;
+    background-color: #A12568;
+    color: #EEEEEE;
+    border-radius: 80px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  background-color: #2A0944;
+  color: #f3e4ec;
+  width: 100%;
+}
+
+th {
+    background-color: #2A0944;
+    color: #c67ca4;
+}
+
+td, th {
+    border: 1px solid #3B185F;
+  text-align: left;
+  padding: 8px;
+}
+
+.delete-btn {
+    cursor: pointer;
+    padding: 8px 20px;
+    background-color: #3B185F;
+    font-weight: 800;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+tr:nth-child(odd) .delete-btn {
+    background-color: #A12568;
+}
+
+.delete-btn:hover,
+tr:nth-child(odd) .delete-btn:hover {
+    background-color: #c67ca4;
 }

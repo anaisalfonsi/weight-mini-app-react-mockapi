@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import WeightList from './components/WeightList';
+import WeightForm from './components/WeightForm';
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <main>
+        <section>
+          <h1>Weight Daily Journal</h1>
+        </section>
+        <section>
+          <WeightForm />
+        </section>
+        <section>
+          <WeightList />
+        </section>
+      </main>
+    </Provider>
   );
 }
 
